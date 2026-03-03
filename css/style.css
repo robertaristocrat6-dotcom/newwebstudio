@@ -6,19 +6,20 @@
     --text-color: #757575;
     --title-color: #212121;
     --address-color: rgba(255, 255, 255, 0.60);
+    --bgteam-color:#F5F4FA;
 }
 
 body{
     font-family: Roboto;
 }
 
-
+/* секція хедер */
 
 .header {
     background: #FFF;
 }
-.header-link {
-    color: var(--link-color);
+.header-logo {
+    color: var(--link-color) ;
 font-family: Raleway;
 font-size: 26px;
 font-weight: 700;
@@ -29,29 +30,21 @@ letter-spacing: 0.78px;
 .header-span {
     color: var(--logo-color);
 }
-.header-adapterB {
-    color: var(--link-color);
-font-size: 14px;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 0.28px;
-}
-.header-adapter {
-    color: var(--title-color);
+
+.header-link {
+color: var(--title-color);
 font-size: 14px;
 font-weight: 500;
 line-height: normal;
 letter-spacing: 0.28px;
 
 }
-.header-email {
-    color: var(--link-color);
-font-size: 14px;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 0.28px;
 
+.header-link:hover {
+    color: var(--link-color);
 }
+
+
 .header-contact {
     color: var(--text-color);
 font-size: 14px;
@@ -61,13 +54,19 @@ letter-spacing: 0.28px;
 
 }
 
-.hero {
+.header-contact:hover {
+    color: var(--link-color);
+}
+
+/* секція Банер */
+
+.banner {
     background: var(--back-color);
 
 }
-.hero-title{
-    flex-shrink: 0;
-color: #FFF;
+.banner-title{
+    
+color: var(--main-color);
 text-align: center;
 font-size: 44px;
 font-weight: 900;
@@ -77,7 +76,7 @@ text-transform: uppercase;
 
 }
 
-.hero-btn {
+.banner-button {
     color: var(--main-color);
 text-align: center;
 font-size: 16px;
@@ -86,7 +85,10 @@ line-height: 30px;
 letter-spacing: 0.96px;
 background-color: var(--link-color);
 }
-.pros-title {
+
+/* секція воркінг */
+
+.working-title {
     color: var(--title-color);
 font-size: 14px;
 font-weight: 700;
@@ -96,7 +98,7 @@ text-transform: uppercase;
 
 }
 
-.pros-text {
+.working-text {
     color: var(--text-color);
 font-size: 14px;
 font-weight: 400;
@@ -104,6 +106,9 @@ line-height: 24px;
 letter-spacing: 0.42px;
 
 }
+
+/* секція ворк */
+
 .work-title {
     color: var(--title-color);
 text-align: center;
@@ -114,14 +119,14 @@ letter-spacing: 1.08px;
 
 }
 
+/* section Team */
+
 .team {
-    transform: rotate(-0.026deg);
-background: #F5F4FA;
+background: var(--bgteam-color);
 
 }
 
 .team-title {
-    transform: rotate(-0.026deg);
 color: var(--title-color);
 text-align: center;
 font-size: 36px;
@@ -131,12 +136,9 @@ letter-spacing: 1.08px;
 
 }
 .team-caption {
-    transform: rotate(-0.026deg);
 color: var(--title-color);
 text-align: center;
-
 font-size: 16px;
-
 font-weight: 500;
 line-height: normal;
 letter-spacing: 0.48px;
@@ -144,51 +146,88 @@ letter-spacing: 0.48px;
 }
 
 .team-text {
-    
-transform: rotate(-0.026deg);
 color: var(--text-color);
 text-align: center;
-
 font-size: 16px;
-
 font-weight: 400;
 line-height: normal;
 letter-spacing: 0.48px;
 
 }
-.footer {
-    background: #2F303A;
 
+/* section footer */
+
+.footer {
+    background: var(--back-color);
 }
-.footer-link {
-    color: var(--link-color);
+.footer-logo {
+color: var(--link-color);
 font-family: Raleway;
 font-size: 26px;
-
 font-weight: 700;
 line-height: normal;
 letter-spacing: 0.78px;
+
 }
 
 .footer-span {
     color: var(--main-color);
 }
-.footer-contact {
+
+.footer-link {
     color: var(--address-color);
-
 font-size: 14px;
-
+ font-style: normal;
 font-weight: 400;
 line-height: 24px;
 letter-spacing: 0.42px;
 
 }
-.footer-geo {
-    color: var(--main-color);
 
+.footer-item:first-child {
+    .footer-link {
+color: var(--main-color);
 font-size: 14px;
+font-style: normal;
 font-weight: 400;
 line-height: 24px;
 letter-spacing: 0.42px;
+    }
+
+}
+
+/* portfolio */
+
+.cart-button {
+    color:var(--title-color);
+text-align: center;
+font-size: 16px;
+font-weight: 500;
+line-height: 26px;
+letter-spacing: 0.48px;
+border-radius: 4px;
+background: var(--bgteam-color);
+border: none;
+}
+
+.cart-button:hover{
+    background-color: var(--link-color);
+    color: var(--main-color);
+}
+
+.cart-caption {
+    color: var(--logo-color);
+font-size: 18px;
+font-weight: 700;
+line-height: 36px;
+letter-spacing: 1.08px;
+}
+
+.cart-text {
+    color: var(--text-color);
+font-size: 16px;
+font-weight: 400;
+line-height: 30px;
+letter-spacing: 0.48px;
 
 }
