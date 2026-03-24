@@ -25,6 +25,8 @@ body{
     background: #FFF;
     padding-bottom: 30px;
     padding-top: 30px;
+    margin-top: 24px;
+    margin-bottom: 25px;
 }
 .header-logo {
     color: var(--link-color) ;
@@ -206,7 +208,7 @@ letter-spacing: 0.42px;
 }
 
 .footer-item:first-child {
-footer-link {
+ьььььььььььььььььььььььььfooter-link {
 color: var(--main-color);
 font-size: 14px;
 font-style: normal;
