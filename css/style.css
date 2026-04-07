@@ -23,11 +23,26 @@ body{
 
 .header {
     background: #FFF;
-    padding-bottom: 30px;
-    padding-top: 30px;
-    margin-top: 24px;
-    margin-bottom: 25px;
+    padding-bottom: 24px;
+    padding-top: 25px;
 }
+
+.header-list {
+    display: flex;
+    gap: 50px;
+}
+
+.header-contact {
+    display: flex;
+    gap: 50px;
+    margin-left: auto;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
 .header-logo {
     color: var(--link-color) ;
 font-family: Raleway;
@@ -35,10 +50,11 @@ font-size: 26px;
 font-weight: 700;
 line-height: normal;
 letter-spacing: 0.78px;
+margin-right: 93px;
 }
 .header-span {
     color: var(--logo-color);
-}
+}    
 
 .header-link {
 color: var(--title-color);
@@ -53,8 +69,17 @@ letter-spacing: 0.28px;
     color: var(--link-color);
 }
 
+.header-phone {
+    color: var(--text-color);
+font-size: 14px;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.28px;
 
-.header-contact {
+}
+
+
+.header-email {
     color: var(--text-color);
 font-size: 14px;
 font-weight: 500;
@@ -74,8 +99,9 @@ letter-spacing: 0.28px;
     padding-bottom: 200px;
     padding-top: 200px;
 }
+
+
 .banner-title{
-    
 color: var(--main-color);
 text-align: center;
 font-size: 44px;
@@ -83,7 +109,8 @@ font-weight: 900;
 line-height: 60px;
 letter-spacing: 2.64px;
 text-transform: uppercase;
-
+width: 696.0px;
+margin: auto;
 }
 
 .banner-button {
@@ -94,13 +121,23 @@ font-weight: 700;
 line-height: 30px;
 letter-spacing: 0.96px;
 background-color: var(--link-color);
+display: block;
+margin: 0 auto;
+margin-top: 30px;
+padding: 10px 32px;
+border-radius: 4px;
 }
 
 /* секція воркінг */
 
 .working {
-    padding-bottom: 95px;
+    
     padding-top: 95px;
+}
+
+.working-list {
+    display: flex;
+    gap: 30px;
 }
 
 .working-title {
@@ -119,14 +156,15 @@ font-size: 14px;
 font-weight: 400;
 line-height: 24px;
 letter-spacing: 0.42px;
-
+width: 270.0px;
+margin-top: 10px;
 }
 
 /* секція ворк */
 
 .work {
-    padding-bottom: 139px;
-    padding-top: 139px;
+    padding-bottom: 94px;
+    padding-top: 94px;
 }
 
 .work-title {
@@ -137,6 +175,12 @@ font-weight: 700;
 line-height: normal;
 letter-spacing: 1.08px;
 
+}
+
+.work-list {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
 }
 
 /* section Team */
@@ -154,8 +198,24 @@ font-size: 36px;
 font-weight: 700;
 line-height: normal;
 letter-spacing: 1.08px;
+margin-bottom: 50px;
+}
+
+.team-list {
+    display: flex;
+    gap: 30px;
+}
+
+.team-item {
+    padding-bottom: 30px;
+    background-color: var(--main-color);
+}
+
+.team-image {
+    width: 270.0px;
 
 }
+
 .team-caption {
 color: var(--title-color);
 text-align: center;
@@ -163,7 +223,8 @@ font-size: 16px;
 font-weight: 500;
 line-height: normal;
 letter-spacing: 0.48px;
-
+margin-top: 30px;
+margin-bottom: 10px;
 }
 
 .team-text {
@@ -180,8 +241,8 @@ letter-spacing: 0.48px;
 
 .footer {
     background: var(--back-color);
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 .footer-logo {
 color: var(--link-color);
@@ -197,6 +258,16 @@ letter-spacing: 0.78px;
     color: var(--main-color);
 }
 
+.footer-address {
+    margin-top: 20px;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction:column ;
+    gap: 9px;
+}
+
 .footer-link {
     color: var(--address-color);
 font-size: 14px;
@@ -208,7 +279,7 @@ letter-spacing: 0.42px;
 }
 
 .footer-item:first-child {
-ьььььььььььььььььььььььььfooter-link {
+.footer-link {
 color: var(--main-color);
 font-size: 14px;
 font-style: normal;
@@ -222,11 +293,18 @@ letter-spacing: 0.42px;
 /* portfolio */
 
 .cart {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
-.cart-button {
+.cart-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    gap: 8px;
+}
+
+.cart-btn{
     color:var(--title-color);
 text-align: center;
 font-size: 16px;
@@ -236,11 +314,28 @@ letter-spacing: 0.48px;
 border-radius: 4px;
 background: var(--bgteam-color);
 border: none;
+padding: 6px 22px;
 }
 
-.cart-button:hover{
+.cart-btn:hover{
     background-color: var(--link-color);
     color: var(--main-color);
+}
+
+.cart-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cart-elem {
+    border: 1px solid #EEE;
+background: #FFF;
+max-width: 370px;
+}
+
+.cart-box {
+    padding: 20px 24px;
 }
 
 .cart-caption {
@@ -249,6 +344,7 @@ font-size: 18px;
 font-weight: 700;
 line-height: 36px;
 letter-spacing: 1.08px;
+margin-bottom: 4px;
 }
 
 .cart-text {
@@ -258,4 +354,13 @@ font-weight: 400;
 line-height: 30px;
 letter-spacing: 0.48px;
 
+}
+
+.box {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.box:n3 {
+    margin-bottom: 94px;
 }
