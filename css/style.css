@@ -326,3 +326,23 @@ margin-bottom: 50px;
 .footer-link[target="_blank"] {
   color: var(--main-color);
 }
+
+.team-image {
+  fill: #FFF;
+  width: 44.0px;
+height: 44.0px;
+
+}
+
+.team-image::hover {
+  fill: var(--link-color);
+}
+
+.client-image{
+  width: 170.0px;
+height: 92.0px;
+
+}
+.client-image::hover{
+  fill: var(--link-color);
+}
