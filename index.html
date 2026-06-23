@@ -63,7 +63,7 @@
       <section class="banner">
         <div class="container">
           <h1 class="banner-title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="banner-button" type="button">Замовити послугу</button>
+          <button data-modal-open class="banner-button" type="button">Замовити послугу</button>
         </div>
       </section>
       <section class="working">
@@ -368,44 +368,58 @@
             </li>
           </ul>
         </div>
+        <div class="footer-sub">
+          <h3 class="footer-sub-title">Підпишіться на розсилку</h3>
+          <form >
+            <label class="footer-sub-lb"> Пошта
+                <input class="footer-sub-input" type="email">
+            </label>
+          </form>
+          <div class="footer-sub-box-btn">
+            <button class="footer-sub-btn"></button>
+          </div>
+          
+        </div>
       </div>
     </footer>
 
-    <div class="backdrop">
+   <div data-modal class="backdrop is-hidden">
     <div class="model">
-        <button class="model-close">
-           <svg class="model-x"><use href="./img/symbol-defs.svg#icon-close"></use></svg>
+        <button data-modal-close class="model-close">
+            <svg class="model-x"><use href="./img/symbol-defs.svg#icon-close"></use></svg>
         </button>
         <h2 class="model-title">
             Залиште свої дані, ми вам передзвонимо
         </h2>
         <form class="model-btn" >
-            <div class="model-box1">
-              <label class="model-lb"> Ім'я
-                <input class="model-input" type="text">
+            <label class="model-lb"> Ім'я
+                <input class="model-input" type="text" required >
+                <svg class="model-lb-svg"><use href="./img/symbol-defs.svg#icon-person"></use></svg>
             </label>
 
             <label class="model-lb"> Телефон
-                <input class="model-input" type="tel">
+                <input class="model-input" type="tel" required pattern="^\+?(38)?0\d{9}$">
+                 <svg class="model-lb-svg"><use href="./img/symbol-defs.svg#icon-phone"></use></svg>
             </label>
 
             <label class="model-lb"> Пошта
-                <input class="model-input" type="email">
+                <input class="model-input" type="email" required>
+                 <svg class="model-lb-svg"><use href="./img/symbol-defs.svg#icon-email"></use></svg>
             </label>
             <label class="model-lb-tex" > Коментар
                 <textarea class="model-tex" placeholder="Введіть текст"></textarea>
             </label>
-            </div>
-            <div class="model-check">
-                <input class="model-checkbox" type="checkbox">
+            <div class="model-check" >
+                <input class="model-checkbox" type="checkbox" required>
                 <p class="model-text">Погоджуюся з розсилкою та приймаю</p>
                 <a href="" class="model-link">Умови договору</a>
             </div>
-           <div class="model-box2">
-             <button class="model-send" type="submit">Відправити</button>
-           </div>
+            <div class="model-box1">
+                <button class="model-send" type="submit">Відправити</button>
+            </div>
         </form>
     </div>
 </div>
+<script type="module" src="./js/model.js"></script>
   </body>
 </html>
