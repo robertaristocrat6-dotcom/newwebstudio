@@ -355,6 +355,7 @@ transition-duration: 250ms ;
   margin-bottom: 50px;
 }
 
+/* 1. Анімація для кнопок фільтра */
 .cart-btn {
   font-family: inherit;
   font-weight: 500;
@@ -365,14 +366,18 @@ transition-duration: 250ms ;
   border: none;
   background-color: var(--bgteam-color);
   cursor: pointer;
+  
+  /* Додаємо transition для плавного ефекту при ховері */
+  transition-property: color, background-color, box-shadow;
+  transition-duration: 2000ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cart-btn:hover,
 .cart-btn:focus {
-border-radius: 4px;
-color: var(--main-color);
-background: #2196F3;
-box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
+  color: var(--main-color);
+  background-color: #2196F3; 
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
 .cart-elements {
@@ -384,7 +389,10 @@ box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 
 .cart-elem {
   border: 1px solid var(--card-border);
   background: #FFF;
-  transition: border-color 250ms ease, box-shadow 250ms ease;
+  
+  transition-property: border-color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cart-elem:hover {
@@ -393,6 +401,7 @@ box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 
               0 4px 4px 0 rgba(0, 0, 0, 0.06), 
               1px 4px 6px 0 rgba(0, 0, 0, 0.16);
 }
+
 .cart-box {
   padding: 20px 24px;
 }
@@ -408,7 +417,8 @@ box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 
   height: auto;
 }
 
-  .cart-overlay {
+/* 3. Анімація для виїжджаючого оверлею */
+.cart-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -419,6 +429,14 @@ box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 
   display: flex;
   align-items: center;
   transform: translateY(100%);
+
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cart-elem:hover .cart-overlay {
+  transform: translateY(0);
 }
 
 .overlay-text {
@@ -426,10 +444,6 @@ box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 
   font-size: 18px;
   line-height: 1.56;
   letter-spacing: 0.03em;
-}
-
-.cart-elem:hover .cart-overlay {
-  transform: translateY(0);
 }
 
 .cart-caption {
@@ -500,6 +514,10 @@ transition-duration: 250ms ;
   padding: 60px 0;
 }
 
+.join {
+  margin-left: 70px ;
+  margin-right: auto;
+}
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-size: 26px;
@@ -511,7 +529,6 @@ transition-duration: 250ms ;
 
 .footer-container{
   display: flex;
-  gap: 70px;
   align-items: baseline;
 }
 
@@ -588,30 +605,57 @@ font-weight: 700;
 line-height: normal;
 letter-spacing: 0.42px;
 text-transform: uppercase;
+margin-bottom: 20px;
 }
 
 .footer-sub-btn {
-  width: 358.0px;
-height: 50.0px;
 border-radius: 4px;
 border: 1px solid rgba(255, 255, 255, 0.30);
 background: rgba(33, 150, 243, 0.00);
 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-
-}
-
-.footer-sub-lb {
-  display: flex;
-flex-direction: column;
-justify-content: center;
-color: rgba(255, 255, 255, 0.60);
+border-radius: 4px;
+background: #2196F3;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+width: 200.0px;
+height: 50.0px;
+  color: #FFF;
+text-align: center;
 font-family: Roboto;
 font-size: 16px;
 font-style: normal;
+font-weight: 700;
+line-height: 30px;
+letter-spacing: 0.96px;
+display: flex;
+align-items: center;
+gap: 10px;
+justify-content: center;
+}
+
+.footer-form{
+  display: flex;
+  gap: 12px;
+}
+
+.footer-sub-send {
+  width: 24px;
+height: 24px;
+fill: #FFF;
+}
+
+.footer-sub-input {
+  font-size: 16px;
 font-weight: 400;
 line-height: 20px;
 letter-spacing: 0.48px;
-
+border-radius: 4px;
+border: 1px solid rgba(255, 255, 255, 0.30);
+background: rgba(33, 150, 243, 0.00);
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+width: 358px;
+height: 50px;
+background-color: transparent;
+padding-left: 16px;
 }
 
 .footer-contact:hover {
