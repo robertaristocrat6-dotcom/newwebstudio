@@ -17,6 +17,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -69,27 +70,27 @@
       <section class="working">
         <div class="container">
           <ul class="working-list">
-            <li class="working-item">
+            <li data-aos="flip-left" class="working-item">
               <h2 class="working-title">УВАГА ДО ДЕТАЛЕЙ</h2>
               <p class="working-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
-            <li class="working-item">
+            <li data-aos="flip-left" class="working-item">
               <h2 class="working-title">ПУНКТУАЛЬНІСТЬ</h2>
               <p class="working-text">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
-            <li class="working-item">
+            <li data-aos="flip-right" class="working-item">
               <h2 class="working-title">ПЛАНУВАННЯ</h2>
               <p class="working-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li class="working-item">
+            <li data-aos="flip-right" class="working-item">
               <h2 class="working-title">СУЧАСНІ ТЕХНОЛОГІЇ</h2>
               <p class="working-text">
                 Значимість цих проблем настільки очевидна, що реалізація
@@ -101,19 +102,19 @@
       </section>
       <section class="work">
         <div class="container">
-          <h2 class="work-title">Чим ми займаємося</h2>
+          <h2  class="work-title">Чим ми займаємося</h2>
           <ul class="work-list">
             <li class="work-item">
               <img class="work-image" src="./img/comp.webp" alt="ПК"/>
-              <p class="work-text">Десктопні додатки</p>
+              <p data-aos="fade-up" data-aos-duration="3000" class="work-text">Десктопні додатки</p>
             </li>
             <li class="work-item">
               <img class="work-image" src="./img/laptop.webp" alt="ноутбук" />
-              <p class="work-text">Мобільні додатки</p>
+              <p data-aos="fade-up" data-aos-duration="3000" class="work-text">Мобільні додатки</p>
             </li>
             <li class="work-item">
               <img src="./img/tablet.webp" alt="планшет" />
-              <p class="work-text">Дизайнерські рішення</p>
+              <p data-aos="fade-up" data-aos-duration="3000" class="work-text">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -372,7 +373,7 @@
           <h3 class="footer-sub-title">Підпишіться на розсилку</h3>
           <form class="footer-form" >
             <label class="footer-sub-lb"> 
-                <input placeholder="E-mail" class="footer-sub-input" type="email">
+                <input required placeholder="E-mail" class="footer-sub-input" type="email">
             </label>
             <button class="footer-sub-btn">Підпишіться <svg class="footer-sub-send">
               <use href="./img/symbol-defs.svg#icon-send"></use>
@@ -383,7 +384,7 @@
       </div>  
     </footer>
 
-   <div data-modal class="backdrop is-hidden">
+   <div data-aos="flip-up" data-modal class="backdrop is-hidden">
     <div class="model">
         <button data-modal-close class="model-close">
             <svg class="model-x"><use href="./img/symbol-defs.svg#icon-close"></use></svg>
@@ -421,5 +422,9 @@
     </div>
 </div>
 <script type="module" src="./js/model.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
   </body>
 </html>
