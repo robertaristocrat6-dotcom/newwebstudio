@@ -1,17 +1,15 @@
 .working {
   padding: 94px 0;
-}
 
-.working-list {
+  &__list {
   display: flex;
   gap: 30px;
 }
 
-.working-item {
+&__item {
   flex-basis: calc((100% - 90px) / 4);
-}
 
-.working-item::before {
+  &__::before {
     content: "";
     display: block;
     height: 120px;
@@ -24,27 +22,35 @@ background-repeat: no-repeat;
 background-position: center;
 }
 
-.working-item:nth-child(2)::before{
+&__:nth-child(2)::before{
     background-image: url(../img/clock.png);
 }
 
-.working-item:nth-child(3)::before{
+&__:nth-child(3)::before{
     background-image: url(../img/diagram.png);
 }
 
-.working-item:nth-child(4)::before{
+&__:nth-child(4)::before{
     background-image: url(../img/astronaut.png);
 }
-.working-title {
+
+
+&__title {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
 }
 
-.working-text {
+&__text {
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.71;
 }
+}
+}
+
+
+
+
 

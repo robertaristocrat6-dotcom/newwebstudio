@@ -1,6 +1,10 @@
+@use "../base/variablass" as * ;
+
+
+
 body {
   font-family: "Roboto", sans-serif;
-  color: var(--title-color);
-  background-color: var(--main-color);
+  color:$title-color;
+  background-color:$main-color;
   margin: 0;
 }

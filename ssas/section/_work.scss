@@ -1,3 +1,5 @@
+@use "../base/variablass" as * ;
+
 .work {
   padding-bottom: 94px;
 }
@@ -38,7 +40,7 @@
   justify-content: center;
   align-items: center;
   margin: 0;
- color: #FFF;
+ color: $main-color;
 text-align: center;
 font-size: 14px;
 font-style: normal;
@@ -46,5 +48,5 @@ font-weight: 700;
 line-height: normal;
 letter-spacing: 0.42px;
 text-transform: uppercase;
-background-color:rgba(47, 48, 58, 0.80);
+background-color:$back-color;
 }

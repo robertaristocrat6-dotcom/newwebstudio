@@ -1,10 +1,12 @@
+@use "../base/variablass" as * ;
+
 .team {
-  background-color: var(--bgteam-color);
+  background-color: $bgteam-color;
   padding: 94px 0;
 }
 
 .team-title {
-    color: var(--title-color);
+    color: $title-color;
 text-align: center;
 font-size: 36px;
 font-weight: 700;
@@ -27,9 +29,9 @@ justify-content: center;
 }
 
 .team-link:hover{
-background-color: var(--link-color);
+background-color: $link-color;
 .team-icon{
-  fill: var(--main-color);
+  fill: $main-color;
 }
 }
 
@@ -46,12 +48,12 @@ transition-duration: 250ms ;
 }
 
 .team-item {
-  background-color: var(--main-color);
+  background-color: $main-color;
   flex-basis: calc((100% - 90px) / 4);
   text-align: center;
   padding-bottom: 30px;
   border-radius: 0 0 4px 4px;
-background: #FFF;
+background: $main-color;
 box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.20);
 
 }
@@ -59,7 +61,7 @@ box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 
 .team-icon {
 width: 20.0px;
 height: 20.0px;
-fill: #AFB1B8;
+fill: $icon-color;
 transition-property: fill ;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 transition-duration: 250ms ;
@@ -72,6 +74,6 @@ transition-duration: 250ms ;
 }
 
 .team-text {
-  color: var(--text-color);
+  color: $text-color;
   font-size: 16px;
 }

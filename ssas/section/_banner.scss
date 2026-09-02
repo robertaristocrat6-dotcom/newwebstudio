@@ -1,5 +1,8 @@
+@use "../base/variablass" as *;
+
+
 .banner {
-  background-color: var(--back-color);
+  background-color: $back-color;
   padding: 200px 0;
   text-align: center;
   background-image: linear-gradient(rgba(47, 48, 58, 0.40),rgba(47, 48, 58, 0.40) ) , url(../img/hero.webp);
@@ -7,10 +10,9 @@
   background-position: center;
   background-size: cover;
   
-}
 
-.banner-title {
-  color: var(--main-color);
+  &__title {
+  color: $main-color;
   font-size: 44px;
   font-weight: 900;
   line-height: 1.36;
@@ -19,9 +21,9 @@
   margin: 0 auto 30px;
 }
 
-.banner-button {
-  color: var(--main-color);
-  background-color: var(--link-color);
+&__button {
+  color: $main-color;
+  background-color: $link-color;
   font-family: inherit;
   font-size: 16px;
   font-weight: 700;
@@ -31,3 +33,7 @@
   border: none;
   cursor: pointer;
 }
+}
+
+
+
