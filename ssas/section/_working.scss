@@ -1,3 +1,5 @@
+@use "../base/variablass" as * ;
+
 .working {
   padding: 94px 0;
 
@@ -9,31 +11,35 @@
 &__item {
   flex-basis: calc((100% - 90px) / 4);
 
-  &__::before {
+  &::before {
     content: "";
     display: block;
     height: 120px;
     width: 270px;
     border-radius: 4px;
-background: var(--bgteam-color);
+background: $bgteam-color;
 margin-bottom: 30px;
 background-image: url(../img/antenna.png);
 background-repeat: no-repeat;
 background-position: center;
 }
 
-&__:nth-child(2)::before{
+&:nth-child(2)::before{
     background-image: url(../img/clock.png);
 }
 
-&__:nth-child(3)::before{
+&:nth-child(3)::before{
     background-image: url(../img/diagram.png);
 }
 
-&__:nth-child(4)::before{
+&:nth-child(4)::before{
     background-image: url(../img/astronaut.png);
 }
 
+
+
+
+}
 
 &__title {
   font-size: 14px;
@@ -42,11 +48,11 @@ background-position: center;
   margin-bottom: 10px;
 }
 
+
 &__text {
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.71;
-}
 }
 }
 

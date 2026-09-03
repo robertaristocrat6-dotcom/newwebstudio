@@ -3,9 +3,8 @@
 .team {
   background-color: $bgteam-color;
   padding: 94px 0;
-}
 
-.team-title {
+  &__title {
     color: $title-color;
 text-align: center;
 font-size: 36px;
@@ -14,28 +13,34 @@ line-height: normal;
 letter-spacing: 1.08px;
 margin-bottom: 50px;
 }
-
-.team-list {
+&__list {
   display: flex;
   gap: 30px;
 }
+&__item {
+  background-color: $main-color;
+  flex-basis: calc((100% - 90px) / 4);
+  text-align: center;
+  padding-bottom: 30px;
+  border-radius: 0 0 4px 4px;
+background: $main-color;
+box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.20); 
+}
 
-.team-items {
+&__caption {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+  &__items {
   display: flex;
   gap: 10px;
  margin-top: 16px;
 justify-content: center;
+  }
 
-}
-
-.team-link:hover{
-background-color: $link-color;
-.team-icon{
-  fill: $main-color;
-}
-}
-
-.team-link {
+&__link {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -45,35 +50,37 @@ border-radius: 100%;
 transition-property: background-color ;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 transition-duration: 250ms ;
+
+  &:hover{
+background-color: $link-color;
 }
 
-.team-item {
-  background-color: $main-color;
-  flex-basis: calc((100% - 90px) / 4);
-  text-align: center;
-  padding-bottom: 30px;
-  border-radius: 0 0 4px 4px;
-background: $main-color;
-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px 0 rgba(0, 0, 0, 0.20);
+
 
 }
 
-.team-icon {
+
+
+&__icon {
 width: 20.0px;
 height: 20.0px;
 fill: $icon-color;
 transition-property: fill ;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 transition-duration: 250ms ;
+
+&:hover{
+  fill: $main-color;
+}
 }
 
-.team-caption {
-  font-size: 16px;
-  font-weight: 500;
-  margin: 30px 0 10px;
+
+
+
+
+
 }
 
-.team-text {
-  color: $text-color;
-  font-size: 16px;
-}
+
+
+

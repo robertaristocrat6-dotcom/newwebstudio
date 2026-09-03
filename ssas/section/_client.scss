@@ -3,15 +3,8 @@
 
 .client{
   padding: 94px 0px;
-}
 
- .client-list {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
- }
- 
-.client-title {
+  &__title {
   color: $title-color;
 text-align: center;
 font-size: 36px;
@@ -19,24 +12,13 @@ font-weight: 700;
 margin-bottom: 50px;
 }
 
-.client-icon {
-  width: 106px;
-  height: 60px;
-fill: $icon-color;
-border-radius: 4px;
-transition-property: fill ;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-transition-duration: 250ms ;
-}
-
-.client-link:hover {
- .client-icon{
-  fill: $link-color;
+ &__list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
  }
-  border-color: $link-color;
-}
-
-.client-link {
+ 
+&__link {
   width: 170px;
   height: 92px;
   border: 1px solid $icon-color;
@@ -47,4 +29,31 @@ transition-duration: 250ms ;
   transition-property: border-color  ;
 transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
 transition-duration: 250ms ;
+
+&:hover {
+ .client__icon{
+  fill: $link-color;
+ }
+  border-color: $link-color;
 }
+
+}
+
+
+&__icon {
+  width: 106px;
+  height: 60px;
+fill: $icon-color;
+border-radius: 4px;
+transition-property: fill ;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+transition-duration: 250ms ;
+}
+
+}
+
+
+
+
+
+
