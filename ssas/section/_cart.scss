@@ -2,17 +2,18 @@
 
 .cart {
   padding: 94px 0;
-}
 
-.cart-list {
+
+  &__list {
   display: flex;
   justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
+
+  
 }
 
-
-.cart-btn {
+  .cart__btn {
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -27,54 +28,54 @@
   transition-property: color, background-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.cart-btn:hover,
-.cart-btn:focus {
+  &:hover,
+  &:focus {
   color: $main-color;
   background-color: $link-color; 
   box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.10), 0 1px 2px 0 rgba(0, 0, 0, 0.08), 0 2px 2px 0 rgba(0, 0, 0, 0.12);
 }
+} 
 
-.cart-elements {
+&__elements {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.cart-elem {
+&__elem {
   border: 1px solid $card-border;
   background: $main-color;
   
   transition-property: border-color, box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.cart-elem:hover {
+  &:hover {
   border-color: $card-border;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 
               0 4px 4px 0 rgba(0, 0, 0, 0.06), 
               1px 4px 6px 0 rgba(0, 0, 0, 0.16);
 }
 
-.cart-box {
-  padding: 20px 24px;
+
+&__:hover {
+  transform: translateY(0);
+}
 }
 
-.cart-thumb {
+&__thumb {
   position: relative;
   overflow: hidden; 
 }
 
-.cart-img {
+
+&__img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-
-.cart-overlay {
+&__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -89,21 +90,36 @@
   transition-property: transform;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.cart-elem:hover .cart-overlay {
+  
+  &:hover {
   transform: translateY(0);
 }
+}
 
-.cart-caption {
+
+&__box {
+  padding: 20px 24px;
+}
+
+
+
+
+
+
+
+&__caption {
   font-size: 18px;
   font-weight: 700;
   line-height: 2;
   margin-bottom: 4px;
 }
 
-.cart-text {
+&__text {
   color: $text-color;
   font-size: 16px;
   line-height: 1.87;
 }
+}
+
+

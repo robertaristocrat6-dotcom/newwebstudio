@@ -174,8 +174,10 @@ padding: 10px 52px;
   align-items: center;
 }
 
-&__hidden {
+
+}
+
+.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
 }
