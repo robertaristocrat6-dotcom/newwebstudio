@@ -1,5 +1,5 @@
 @use "../base/variablass" as * ;
-
+@use "../base/mixin" as * ;
 .footer {
   background-color: $back-color ;
   padding: 60px 0;
@@ -79,9 +79,10 @@ margin-bottom:20px;
   background-color: $black-color ;
   width: 44px;
   height: 44px;
-  transition-property: background-color ;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-transition-duration: 250ms ;
+  @include animation(background-color) ;
+//   transition-property: background-color ;
+// transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+// transition-duration: 250ms ;
 
 
 &:hover {
@@ -93,9 +94,10 @@ transition-duration: 250ms ;
   width: 20.0px;
 height: 20.0px;
 fill: $main-color;
-transition-property: fill ;
-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-transition-duration: 250ms ;
+@include animation
+// transition-property: fill ;
+// transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+// transition-duration: 250ms ;
 }
 
 &__subtitle {

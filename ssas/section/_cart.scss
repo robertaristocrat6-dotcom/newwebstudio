@@ -1,5 +1,5 @@
 @use "../base/variablass" as * ;
-
+@use "../base/mixin" as * ;
 .cart {
   padding: 94px 0;
 
@@ -24,10 +24,8 @@
   background-color: $bgteam-color;
   cursor: pointer;
   
+  // @include animation(color, background-color, box-shadow) ;
   
-  transition-property: color, background-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
@@ -46,10 +44,8 @@
 &__elem {
   border: 1px solid $card-border;
   background: $main-color;
+  @include animation(border-color, box-shadow) ;
   
-  transition-property: border-color, box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
   border-color: $card-border;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12), 
@@ -87,9 +83,8 @@
   align-items: center;
   transform: translateY(100%);
 
-  transition-property: transform;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+@include animation(transform) ;
+
 
   
   &:hover {
