@@ -1,27 +1,58 @@
 @use "../base/variablass" as * ;
 
 .working {
-  padding: 94px 0;
+  padding: 60px ;
+
+  @media (min-with:1200px) {
+padding: 90px 0;
+  }
 
   &__list {
   display: flex;
+  flex-direction: column;
+  
   gap: 30px;
+  @media(min-width:768px){
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 
 &__item {
-  flex-basis: calc((100% - 90px) / 4);
+flex-basis: 100%;
+@media(min-width:480px){
+  flex-basis: 450px;
+}
+@media(min-width:768px){
+  flex-basis: calc((100% - 30px) / 2);
+}
+  @media(min-width:1200px){
+     flex-basis: calc((100% - 90px) / 4);
+  }
+
+
 
   &::before {
     content: "";
     display: block;
     height: 120px;
-    width: 270px;
+    width: 100%;
     border-radius: 4px;
 background: $bgteam-color;
 margin-bottom: 30px;
 background-image: url(../img/antenna.png);
 background-repeat: no-repeat;
 background-position: center;
+@media (min-width:480px){
+  width: 450px;
+}
+@media(min-width:768px) {
+width: 354px;
+}
+
+@media(min-width: 1200px){
+  width: 270px;
+}
 }
 
 &:nth-child(2)::before{
@@ -31,6 +62,7 @@ background-position: center;
 &:nth-child(3)::before{
     background-image: url(../img/diagram.png);
 }
+
 
 &:nth-child(4)::before{
     background-image: url(../img/astronaut.png);
@@ -46,6 +78,10 @@ background-position: center;
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+  text-align: center;
+  @media(min-width:768px){
+    text-align: start;
+  }
 }
 
 
@@ -53,6 +89,16 @@ background-position: center;
   color: var(--text-color);
   font-size: 14px;
   line-height: 1.71;
+
+  @media (min-width:480px){
+  width: 450px;
+}
+@media(min-width:768px){
+  width: 354px;
+}
+@media(min-width:1200px){
+  width: 270px;
+}
 }
 }
 

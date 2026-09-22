@@ -80,9 +80,6 @@ margin-bottom:20px;
   width: 44px;
   height: 44px;
   @include animation(background-color) ;
-//   transition-property: background-color ;
-// transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-// transition-duration: 250ms ;
 
 
 &:hover {
@@ -94,10 +91,7 @@ margin-bottom:20px;
   width: 20.0px;
 height: 20.0px;
 fill: $main-color;
-@include animation
-// transition-property: fill ;
-// transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
-// transition-duration: 250ms ;
+@include animation(fill)
 }
 
 &__subtitle {

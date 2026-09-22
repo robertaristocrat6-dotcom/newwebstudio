@@ -24,7 +24,7 @@
   background-color: $bgteam-color;
   cursor: pointer;
   
-  // @include animation(color, background-color, box-shadow) ;
+  @include animation(color, background-color, box-shadow) ;
   
 
   &:hover,
@@ -83,10 +83,10 @@
   align-items: center;
   transform: translateY(100%);
 
-@include animation(transform) ;
 
 
-  
+
+  @include animation(transform) ;
   &:hover {
   transform: translateY(0);
 }
