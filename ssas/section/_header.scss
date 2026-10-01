@@ -13,6 +13,7 @@
 @media (min-width:1200px) {
   padding: 24px 0 25px;
 }
+
 & .container {
   display: flex;
   align-items: center;
@@ -36,9 +37,29 @@
   }
 }
 
-
 &__span {
   color: $logo-color;
+}
+
+&__btn {
+  width: 40.0px;
+height: 40.0px;
+background: transparent;
+display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+
+@media (min-width:768px){
+  display: none;
+}
+}
+
+
+&__menu {
+  width: 40.0px;
+height: 40.0px;
+
 }
 
 &__navigation {

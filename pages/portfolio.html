@@ -26,6 +26,9 @@
         <a class="header__logo" href="../index.html"
           >Web<span class="header__span">Studio</span></a
         >
+        <button class="header__btn" data-modal-header-open >
+        <svg class="header__menu"><use href="../img/symbol-defs.svg#icon-menu" ></use></svg>  
+        </button>
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
@@ -307,5 +310,29 @@
         </div>
       </div>  
     </footer>
+<div data-header-modal class="menu is-hidden">
+<button type="button" data-modal-header-close class="menu__close">
+  <svg class="menu__icon"><use href="../img/symbol-defs.svg#icon-close"></use></svg>
+</button>
+
+<ul class="menu__list">
+  <li class="menu__item"><a href="../index.html" class="menu__link">Студія</a></li>
+  <li class="menu__item"><a href="../pages/portfolio.html" class="menu__link">Портфоліо</a></li>
+  <li class="menu__item"><a href="" class="menu__link">Контакти</a></li>
+</ul>
+
+<ul class="menu__contacts">
+  <li class="menu__contact"><a href="" class="menu__number">+38 096 111 11 11</a></li>
+  <li class="menu__contact"><a href="" class="menu__email">info@devstudio.com</a></li>
+</ul>
+
+<ul class="menu__socials">
+  <li class="menu__social"><a href="" class="menu__media">Instagram</a></li>
+  <li class="menu__social"><a href="" class="menu__media">Twitter</a></li>
+  <li class="menu__social"><a href="" class="menu__media">Facebook</a></li>
+  <li class="menu__social"><a href="" class="menu__media">LinkedIn</a></li>
+</ul>
+</div>
+    <script type="module" src="../js/menu.js"></script>
   </body>
 </html>

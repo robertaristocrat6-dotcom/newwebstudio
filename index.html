@@ -27,6 +27,9 @@
         <a class="header__logo" href="./index.html"
           >Web<span class="header__span">Studio</span></a
         >
+        <button class="header__btn" data-modal-header-open >
+        <svg class="header__menu"><use href="./img/symbol-defs.svg#icon-menu" ></use></svg>  
+        </button>
         <nav class="header__navigation">
           <ul class="header__list">
             <li class="header__item">
@@ -70,27 +73,27 @@
       <section class="working">
         <div class="container">
           <ul class="working__list">
-            <li data-aos="flip-left" class="working__item">
+            <li  class="working__item">
               <h2 class="working__title">УВАГА ДО ДЕТАЛЕЙ</h2>
               <p class="working__text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
                 формування позиції.
               </p>
             </li>
-            <li data-aos="flip-left" class="working__item">
+            <li  class="working__item">
               <h2 class="working__title">ПУНКТУАЛЬНІСТЬ</h2>
               <p class="working__text">
                 Завдання організації, особливо рамки і місце навчання кадрів
                 тягне у себе.
               </p>
             </li>
-            <li data-aos="flip-right" class="working__item">
+            <li  class="working__item">
               <h2 class="working__title">ПЛАНУВАННЯ</h2>
               <p class="working__text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li data-aos="flip-right" class="working__item">
+            <li  class="working__item">
               <h2 class="working__title">СУЧАСНІ ТЕХНОЛОГІЇ</h2>
               <p class="working__text">
                 Значимість цих проблем настільки очевидна, що реалізація
@@ -311,7 +314,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__block">
           <a class="footer__logo" href="./index.html"
@@ -382,7 +385,7 @@
           
         </div>
       </div>  
-    </footer> -->
+    </footer>
 
    <div data-aos="flip-up" data-modal class="model__backdrop is-hidden">
     <div class="model">
@@ -421,6 +424,32 @@
         </form>
     </div>
 </div>
+
+<div data-header-modal class="menu is-hidden">
+<button type="button" data-modal-header-close class="menu__close">
+  <svg class="menu__icon"><use href="./img/symbol-defs.svg#icon-close"></use></svg>
+</button>
+
+<ul class="menu__list">
+  <li class="menu__item"><a href="./index.html" class="menu__link">Студія</a></li>
+  <li class="menu__item"><a href="./pages/portfolio.html" class="menu__link">Портфоліо</a></li>
+  <li class="menu__item"><a href="" class="menu__link">Контакти</a></li>
+</ul>
+
+<ul class="menu__contacts">
+  <li class="menu__contact"><a href="" class="menu__number">+38 096 111 11 11</a></li>
+  <li class="menu__contact"><a href="" class="menu__email">info@devstudio.com</a></li>
+</ul>
+
+<ul class="menu__socials">
+  <li class="menu__social"><a href="" class="menu__media">Instagram</a></li>
+  <li class="menu__social"><a href="" class="menu__media">Twitter</a></li>
+  <li class="menu__social"><a href="" class="menu__media">Facebook</a></li>
+  <li class="menu__social"><a href="" class="menu__media">LinkedIn</a></li>
+</ul>
+</div>
+<script type="module" src="./js/menu.js"></script>
+
 <script type="module" src="./js/model.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>

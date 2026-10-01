@@ -1,156 +1,120 @@
-@use "../base/variablass" as * ;
-@use "../base/mixin" as * ;
+@use "../base/variablass" as *;
+
 .footer {
-  background-color: $back-color ;
+  background-color: $back-color;
   padding: 60px 0;
 
-  &__container{
-  display: flex;
-  align-items: baseline;
-}
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: center;
+    gap: 30px;
 
-&__logo {
-  font-family: "Raleway", sans-serif;
-  font-size: 26px;
-  font-weight: 700;
-  color: $link-color;
-  display: inline-block;
-  margin-bottom: 20px;
-}
+    @media (min-width: 1200px) {
+      justify-content: space-between;
+    }
+  }
 
+  &__block {
+    text-align: center;
 
+    @media (min-width: 1200px) {
+      text-align: start;
+    }
+  }
 
-&__span {
-  color: $main-color;
-}
+  &__join {
+    text-align: center;
 
-&__address {
-  font-style: normal;
-}
+    @media (min-width: 1200px) {
+      text-align: start;
+      margin-left: 70px;
+      margin-right: auto;
+    }
+  }
 
-&__list {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
+  &__items {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
 
-&__map{
-  color: $main-color;
-font-size: 14px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0.42px;
+  &__contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $black-color;
+    transition: background-color 0.3s ease;
 
-}
+    &:hover {
+      background-color: $link-color;
+    }
+  }
 
-&__link {
-  color: $address-color;
-  font-size: 14px;
-  line-height: 1.71;
+  &__icon {
+    width: 20px;
+    height: 20px;
+    fill: $main-color;
+    transition: fill 0.3s ease;
 
-}
+    .footer__contact:hover & {
+      fill: $main-color;
+    }
+  }
 
-&__join {
-  margin-left: 70px ;
-  margin-right: auto;
-}
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
 
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
 
-&__smalltitle {
-  color: $main-color;
-font-size: 14px;
-font-weight: 700;
-letter-spacing: 0.42px;
-text-transform: uppercase;
-margin-bottom:20px;
-}
+  &__subinput {
+    width: 100%;
+    max-width: 450px;
+    height: 50px;
+    border: 1px solid $input-color;
+    border-radius: 4px;
+    padding-left: 16px;
+    background-color: transparent;
 
-&__items{
-  gap: 10px;
-  display: flex;
-}
+    @media (min-width: 1200px) {
+      max-width: 358px;
+    }
+  }
 
+  &__subbtn {
+    width: 200px;
+    height: 50px;
+    border-radius: 4px;
+    background: $link-color;
+    box-shadow: 0 4px 4px 0 $link-color;
+    color: $main-color;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
 
-&__contact {
-  display: flex;
-  border-radius: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: $black-color ;
-  width: 44px;
-  height: 44px;
-  @include animation(background-color) ;
+    &:hover {
+      background-color: $link-color, 10%;
+    }
+  }
 
-
-&:hover {
-  background-color: $link-color;
-}
-}
-
-&__icon {
-  width: 20.0px;
-height: 20.0px;
-fill: $main-color;
-@include animation(fill)
-}
-
-&__subtitle {
-  color: $main-color;
-font-size: 14px;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.42px;
-text-transform: uppercase;
-margin-bottom: 20px;
-}
-
-&__form{
-  display: flex;
-  gap: 12px;
-}
-
-&__subinput {
-  font-size: 16px;
-font-weight: 400;
-line-height: 20px;
-letter-spacing: 0.48px;
-border-radius: 4px;
-border: 1px solid $input-color;
-background: $boxshadow-color;
-width: 358px;
-height: 50px;
-background-color: transparent;
-padding-left: 16px;
-}
-
-
-&__subbtn {
-border-radius: 4px;
-border: 1px solid $back-color;
-background: $logo-color;
-box-shadow: 0 4px 4px 0 $logo-color;
-border-radius: 4px;
-background: $link-color;
-box-shadow: 0 4px 4px 0 $link-color;
-width: 200.0px;
-height: 50.0px;
-  color: $main-color;
-text-align: center;
-font-family: Roboto;
-font-size: 16px;
-font-style: normal;
-font-weight: 700;
-line-height: 30px;
-letter-spacing: 0.96px;
-display: flex;
-align-items: center;
-gap: 10px;
-justify-content: center;
-}
-
-&__subsend {
-  width: 24px;
-height: 24px;
-fill: $main-color;
-}
+  &__subsend {
+    width: 24px;
+    height: 24px;
+    fill: $main-color;
+  }
 }
